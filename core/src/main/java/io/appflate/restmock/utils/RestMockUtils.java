@@ -78,7 +78,7 @@ public final class RestMockUtils {
     }
 
     private RestMockUtils() {
-        throw new UnsupportedOperationException("(╯‵Д′)╯ PLEASE STAHP!");
+        throw new UnsupportedOperationException("PLEASE STAHP!");
 
     }
 }
