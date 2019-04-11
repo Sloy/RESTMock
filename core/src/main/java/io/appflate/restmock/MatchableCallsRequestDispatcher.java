@@ -19,6 +19,7 @@ package io.appflate.restmock;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.LinkedList;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.List;
 
 import okhttp3.mockwebserver.Dispatcher;
@@ -28,10 +29,10 @@ import okhttp3.mockwebserver.RecordedRequest;
 class MatchableCallsRequestDispatcher extends Dispatcher {
 
     private List<MatchableCall> matchableCalls;
-    private List<RecordedRequest> requestsHistory = new LinkedList<>();
+    private List<RecordedRequest> requestsHistory = new CopyOnWriteArrayList<>();
 
     public MatchableCallsRequestDispatcher() {
-        matchableCalls = new LinkedList<>();
+        matchableCalls = new CopyOnWriteArrayList<>();
     }
 
     @Override
